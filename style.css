@@ -8,8 +8,3 @@ canvas {
     display: block;
     margin: 0 auto;
 }
-
-#myCanvas {
-    width: 480;
-    height: 320;
-}
