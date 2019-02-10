@@ -2,7 +2,7 @@ var canvas = document.getElementById('myCanvas');
     ctx = canvas.getContext('2d');
     x = canvas.width/2;
     y = canvas.height-30;
-    dx = 0;
+    dx = 2;
     dy = -2;
     ballRadius = 20;
 
@@ -20,8 +20,12 @@ function draw() {
     x += dx;
     y += dy;
 
-    if (y + dy > canvas.height || y + dy < 0) {
+    if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
         dy = -dy;
+    }
+
+    if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+        dx = -dx;
     }
 }
 setInterval(draw, 10);
