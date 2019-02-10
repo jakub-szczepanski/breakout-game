@@ -2,7 +2,7 @@ var canvas = document.getElementById('myCanvas');
     ctx = canvas.getContext('2d');
     x = canvas.width/2;
     y = canvas.height-30;
-    dx = 2;
+    dx = 0;
     dy = -2;
 
 function drawBall() {
