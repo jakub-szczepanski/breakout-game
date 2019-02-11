@@ -5,6 +5,9 @@ var canvas = document.getElementById('myCanvas');
     dx = 2;
     dy = -2;
     ballRadius = 20;
+    paddleHeight = 20;
+    paddleWidth = 150;
+    paddleX = (canvas.width-paddleWidth) / 2;
 
 function drawBall() {
     ctx.beginPath();
