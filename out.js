@@ -11,6 +11,9 @@ var canvas = document.getElementById('myCanvas');
     rightPressed = false;
     leftPressed = false;
 
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
