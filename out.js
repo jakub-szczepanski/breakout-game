@@ -14,6 +14,22 @@ var canvas = document.getElementById('myCanvas');
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
+function keyDownHandler(e) {
+    if (e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = true;
+    } else if (e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if (e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+    } else if (e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+    }
+}
+
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
@@ -44,6 +60,12 @@ function draw() {
 
     if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
         dx = -dx;
+    }
+
+    if (rightPressed && paddleX < canvas.width - paddleWidth) {
+        paddleX += 10;
+    } else if (leftPressed && paddleX > 0) {
+        paddleX -= 10;
     }
 }
 setInterval(draw, 10);
