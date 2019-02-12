@@ -1,4 +1,4 @@
 # breakout-game
 Simple breakout game
-#Demo
+# Demo
 https://jakub-szczepanski.github.io/breakout-game/
