@@ -45,6 +45,14 @@ function keyUpHandler(e) {
     }
 }
 
+function collisionDetection() {
+    for (var c=0; c<brickColumnCount; c++) {
+        for (var r=0; r<brickRowCount; r++) {
+            var b = bricks[c][r];
+        }
+    }
+}
+
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
