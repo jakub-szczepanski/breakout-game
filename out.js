@@ -54,6 +54,7 @@ function collisionDetection() {
                 if (x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
                     dy = -dy;
                     b.status = 0;
+                    score++;
                 }
             }
         }
@@ -63,7 +64,7 @@ function collisionDetection() {
 function drawScore() {
     ctx.font = "32px Arial";
     ctx.fillStyle = "#000080";
-    ctx.fillText("Score: "+score, 8, 20);
+    ctx.fillText("Score: "+score, 16, 40);
 }
 
 function drawPaddle() {
@@ -106,6 +107,7 @@ function draw() {
     drawPaddle();
     drawBricks();
     collisionDetection();
+    drawScore();
 
     x += dx;
     y += dy;
