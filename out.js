@@ -55,6 +55,11 @@ function collisionDetection() {
                     dy = -dy;
                     b.status = 0;
                     score++;
+                    if (score == brickRowCount*brickColumnCount) {
+                        alert ("YOU WIN, CONGRATULATIONS!");
+                        document.location.reload();
+                        clearInterval(interval);
+                    }
                 }
             }
         }
@@ -62,7 +67,7 @@ function collisionDetection() {
 }
 
 function drawScore() {
-    ctx.font = "32px Arial";
+    ctx.font = "28px Arial";
     ctx.fillStyle = "#000080";
     ctx.fillText("Score: "+score, 16, 40);
 }
