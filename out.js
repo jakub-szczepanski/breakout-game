@@ -60,6 +60,12 @@ function collisionDetection() {
     }
 }
 
+function drawScore() {
+    ctx.font = "32px Arial";
+    ctx.fillStyle = "#000080";
+    ctx.fillText("Score: "+score, 8, 20);
+}
+
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
