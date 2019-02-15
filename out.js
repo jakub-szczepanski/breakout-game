@@ -78,7 +78,13 @@ function collisionDetection() {
 function drawScore() {
     ctx.font = "28px Arial";
     ctx.fillStyle = "#000080";
-    ctx.fillText("Score: "+score, 16, 40);
+    ctx.fillText("Score: " +score, 16, 40);
+}
+
+function drawLives() {
+    ctx.font = "28px Arial";
+    ctx. fillStyle = "#000080";
+    ctx.fillText("Lives: " +lives, canvas.width-130, 40);
 }
 
 function drawPaddle() {
