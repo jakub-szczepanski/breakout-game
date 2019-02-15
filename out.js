@@ -19,6 +19,7 @@ var canvas = document.getElementById('myCanvas');
     brickOffsetleft = 60;
     bricks = [];
     score = 0;
+    lives = 3;
 
     for (var c=0; c<brickColumnCount; c++) {
         bricks[c] = [];
