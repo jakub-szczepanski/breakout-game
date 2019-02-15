@@ -128,6 +128,7 @@ function draw() {
     drawBricks();
     collisionDetection();
     drawScore();
+    drawLives();
 
     x += dx;
     y += dy;
@@ -138,8 +139,18 @@ function draw() {
         if (x > paddleX && x < paddleX + paddleWidth) {
             dy = -dy;
         } else {
-            alert("GAME OVER");
-            document.location.reload();
+            lives--;
+            if (!lives) {
+                alert("GAME OVER");
+                document.location.reload();
+                clearInterval(interval);
+            } else {
+                x = canvas.width/2;
+                y = canvas.height-60;
+                dx = 2;
+                dy = -2;
+                paddleX = (canvas.width - paddleWidth)/2;
+            }
         }
     }    
 
